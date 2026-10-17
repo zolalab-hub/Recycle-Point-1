@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Space Grotesk',sans-serif;
+    background:#dbcfb3;
+    color:#2e2113;
+}
+
+.hero{
+    padding:30px 50px;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#1d6c32;
+    border:4px solid #1d6c32;
+    padding:12px 25px;
+    border-radius:8px;
+    font-weight:900;
+    font-size:28px;
+    transform:rotate(-2deg);
+}
+
+.nav-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.nav-buttons button{
+    padding:14px 22px;
+    border:2px solid #3E2D17;
+    background:transparent;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.active-btn{
+    background:#2f2212 !important;
+    color:white;
+}
+
+.hero-content{
+    margin-top:60px;
+}
+
+.hero-content h1{
+    line-height:.9;
+    font-size:105px;
+    font-weight:900;
+}
+
+.hero-content span{
+    color:#196a2f;
+}
+
+.hero-content p{
+    margin-top:25px;
+    font-size:18px;
+    line-height:1.6;
+    max-width:650px;
+    font-weight:600;
+}
+
+.materials{
+    margin-top:60px;
+}
+
+.tabs{
+    display:flex;
+}
+
+.tab{
+    padding:14px 28px;
+    border:3px solid #322515;
+    background:#d5c4a0;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.tab.active{
+    background:#cdb88e;
+}
+
+.content-box{
+    border:4px solid #322515;
+    padding:35px;
+    background:#efe8d8;
+}
+
+.tab-content{
+    display:none;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.tab-content.active{
+    display:flex;
+}
+
+.lists{
+    display:flex;
+    gap:100px;
+}
+
+.yes{
+    color:#24703d;
+    margin-bottom:15px;
+}
+
+.no{
+    color:#a13d22;
+    margin-bottom:15px;
+}
+
+ul{
+    line-height:2;
+    font-size:20px;
+}
+
+.pay-box{
+    border:4px dashed #24703d;
+    padding:20px 35px;
+    min-width:330px;
+}
+
+.pay-box small{
+    font-weight:bold;
+}
+
+.pay-box h2{
+    color:#216733;
+    font-size:55px;
+    margin-top:10px;
+}
+
+.steps{
+    background:#196a2f;
+    color:#efe8d8;
+    display:flex;
+    justify-content:space-around;
+    padding:70px 50px;
+    margin-top:80px;
+}
+
+.step h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.step p{
+    font-size:20px;
+}
+
+.footer-strip{
+    background:#d8ccb3;
+    text-align:center;
+    padding:22px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+@media(max-width:900px){
+
+    .hero-content h1{
+        font-size:60px;
+    }
+
+    .tab-content{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .lists{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .steps{
+        flex-direction:column;
+        gap:40px;
+    }
+}

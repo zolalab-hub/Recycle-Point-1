@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recycle Point</title>
+<link rel="stylesheet" href="style.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Space Grotesk',sans-serif;
+    background:#d8ccb3;
+    color:#2d2114;
+}
+
+.hero{
+    padding:30px 50px;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    padding:10px 25px;
+    border:3px solid #1d6b33;
+    color:#1d6b33;
+    font-weight:900;
+    font-size:26px;
+    border-radius:8px;
+    transform:rotate(-2deg);
+}
+
+.nav-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.nav-buttons button{
+    padding:14px 22px;
+    border:2px solid #3b2b18;
+    background:transparent;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.nav-buttons .active-btn{
+    background:#2c2115;
+    color:white;
+}
+
+.hero-content{
+    margin-top:60px;
+}
+
+.hero-content h1{
+    font-size:100px;
+    line-height:.9;
+    font-weight:900;
+}
+
+.hero-content h1 span{
+    color:#1d6b33;
+}
+
+.hero-content p{
+    margin-top:25px;
+    max-width:650px;
+    font-size:18px;
+    line-height:1.6;
+    font-weight:600;
+}
+
+.materials{
+    margin-top:60px;
+}
+
+.tabs{
+    display:flex;
+}
+
+.tab{
+    padding:14px 25px;
+    background:#cfbf99;
+    border:3px solid #352515;
+    border-bottom:none;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.tab.active{
+    background:#d8ccb3;
+}
+
+.content-box{
+    border:3px solid #352515;
+    background:#ece3d0;
+    padding:35px;
+}
+
+.tab-content{
+    display:none;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.tab-content.active{
+    display:flex;
+}
+
+.lists{
+    display:flex;
+    gap:100px;
+}
+
+.yes{
+    color:#236c38;
+    margin-bottom:15px;
+}
+
+.no{
+    color:#b33e25;
+    margin-bottom:15px;
+}
+
+ul{
+    padding-left:20px;
+    line-height:2;
+    font-size:20px;
+}
+
+.pay-box{
+    border:4px dashed #236c38;
+    padding:20px 30px;
+    min-width:300px;
+}
+
+.pay-box small{
+    font-weight:700;
+}
+
+.pay-box h2{
+    color:#1d6b33;
+    font-size:52px;
+}
+
+/* STEPS SECTION */
+
+.steps{
+    margin-top:80px;
+    background:#16692f;
+    display:flex;
+    justify-content:space-around;
+    color:#f2ead8;
+    padding:70px 50px;
+}
+
+.step h2{
+    margin-bottom:15px;
+    font-size:32px;
+}
+
+.step p{
+    font-size:20px;
+}
+
+.footer{
+    background:#d8ccb3;
+    text-align:center;
+    padding:25px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+@media(max-width:900px){
+
+    .hero-content h1{
+        font-size:60px;
+    }
+
+    .tab-content{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .lists{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .steps{
+        flex-direction:column;
+        gap:40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <nav class="navbar">
+        <div class="logo">♻ RECYCLE POINT</div>
+
+        <div class="nav-buttons">
+            <button class="active-btn">What we take</button>
+            <button>Drop-off points</button>
+        </div>
+    </nav>
+
+    <div class="hero-content">
+        <h1>
+            Bring it back.<br>
+            <span>We'll sort it.</span>
+        </h1>
+
+        <p>
+            We collect plastic, paper, glass, metal and old electronics,
+            and pay you per kilo for some of it.
+        </p>
+    </div>
+
+    <div class="materials">
+
+        <div class="tabs">
+            <button class="tab active" data-tab="plastic">Plastic</button>
+            <button class="tab" data-tab="paper">Paper</button>
+            <button class="tab" data-tab="glass">Glass</button>
+            <button class="tab" data-tab="metal">Metal</button>
+            <button class="tab" data-tab="ewaste">E-waste</button>
+        </div>
+
+        <div class="content-box">
+
+            <div class="tab-content active" id="plastic">
+                <div class="lists">
+
+                    <div>
+                        <h3 class="yes">✓ YES, PLEASE</h3>
+                        <ul>
+                            <li>Water bottles</li>
+                            <li>Jerrycans</li>
+                            <li>Clean food tubs</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="no">✕ NO, THANKS</h3>
+                        <ul>
+                            <li>Plastic bags</li>
+                            <li>Crisp packets</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="pay-box">
+                    <small>WE PAY</small>
+                    <h2>KSh 50 / kg</h2>
+                </div>
+            </div>
+
+            <div class="tab-content" id="paper">
+                <div class="lists">
+                    <div>
+                        <h3 class="yes">✓ YES, PLEASE</h3>
+                        <ul>
+                            <li>Newspapers</li>
+                            <li>Books</li>
+                            <li>Cardboard</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="no">✕ NO, THANKS</h3>
+                        <ul>
+                            <li>Wet paper</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pay-box">
+                    <small>WE PAY</small>
+                    <h2>KSh 100 / kg</h2>
+                </div>
+            </div>
+
+            <div class="tab-content" id="glass">
+                <div class="lists">
+                    <div>
+                        <h3 class="yes">✓ YES, PLEASE</h3>
+                        <ul>
+                            <li>Glass bottles</li>
+                            <li>Glass jars</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="no">✕ NO, THANKS</h3>
+                        <ul>
+                            <li>Broken mirrors</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pay-box">
+                    <small>WE PAY</small>
+                    <h2>KSh 200 / kg</h2>
+                </div>
+            </div>
+
+            <div class="tab-content" id="metal">
+                <div class="lists">
+                    <div>
+                        <h3 class="yes">✓ YES, PLEASE</h3>
+                        <ul>
+                            <li>Aluminium cans</li>
+                            <li>Metal containers</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="no">✕ NO, THANKS</h3>
+                        <ul>
+                            <li>Gas cylinders</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pay-box">
+                    <small>WE PAY</small>
+                    <h2>KSh 150 / kg</h2>
+                </div>
+            </div>
+
+            <div class="tab-content" id="ewaste">
+                <div class="lists">
+                    <div>
+                        <h3 class="yes">✓ YES, PLEASE</h3>
+                        <ul>
+                            <li>Phones</li>
+                            <li>Laptops</li>
+                            <li>Cables</li>
+                       v>
+
+                    <div>
+                        <h3 class="no">✕ NO, THANKS</h3>
+                        <ul>
+                            <li>Damaged batteries</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pay-box">
+                    <small>WE PAY</small>
+                    <h2>KSh 100 / kg</h2>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="steps">
+
+    <div class="step">
+        <h2>1. Rinse</h2>
+        <p>Empty and rinse bottles and tins.</p>
+    </div>
+
+    <div class="step">
+        <h2>2. Separate</h2>
+        <p>Keep each material in its own bag.</p>
+    </div>
+
+    <div class="step">
+        <h2>3. Drop off</h2>
+        <p>Weigh in at any of our points.</p>
+    </div>
+
+</section>
+
+<div class="footer">
+    RECYCLE POINT • [0183330447] • LESS WASTE, MORE WORTH
+</div>
+
+<script>
+const tabs = document.querySelectorAll(".tab");
+const contents = document.querySelectorAll(".tab-content");
+
+tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        tab.classList.add("active");
+
+        document
+            .getElementById(tab.dataset.tab)
+            .classList.add("active");
+    });
+});
+</script>
+
+</body>
+</html>
